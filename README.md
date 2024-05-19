@@ -1,21 +1,29 @@
 # openapi-generator-example
 
+This repository is a example of the following technology stack:
+
+- TypeScript
+- React
+- TanStack Query
+- axios
+- OpenAPI Generator
+
 ## How to
 
 ### Install dependencies
 
-```console
-$ pnpm install
+```zsh
+pnpm install
 ```
 
 ### Build
 
-```console
-$ pnpm build
+```zsh
+pnpm build
 ```
 
 ### Generate Client code from OpenAPI
 
-```console
-$ pnpm generate:models
+```zsh
+pnpm generate:models
 ```

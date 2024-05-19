@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 
 const enableMocking = async (): Promise<void> => {
-  if (import.meta.env.DEV) {
-    const { worker } = await import('./mocks/browser');
-    return void worker.start();
+  if (!import.meta.env.DEV) {
+    return;
   }
+
+  const { worker } = await import('./mocks/browser');
+  void (await worker.start());
 };
 
 enableMocking()

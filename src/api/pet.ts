@@ -1,23 +1,22 @@
 import { PetApiFp, type Pet } from 'petstore-models';
+import { axiosPromiseResolver } from '../libs/axios-helper';
 
-const axiosPromiseResolver = <T>(
-  promise: Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<T>>
-): Promise<T> => promise.then((axiosPromise) => axiosPromise().then(({ data }) => data));
+const petApi = PetApiFp();
 
 /**
  * GET: /pet/:petId
  */
-export const getPetByPetId = (petId: number): Promise<Pet> => axiosPromiseResolver(PetApiFp().getPetById(petId));
+export const getPetByPetId = (petId: number): Promise<Pet> => axiosPromiseResolver(petApi.getPetById(petId));
 
 /**
  * POST: /pet
  */
-export const postPet = (body: Pet): Promise<Pet> => axiosPromiseResolver(PetApiFp().addPet(body));
+export const postPet = (body: Pet): Promise<Pet> => axiosPromiseResolver(petApi.addPet(body));
 
 /**
  * Easy to Fix
  */
-import axios, { type AxiosInstance, type AxiosPromise } from 'axios';
+import axios from 'axios';
 import { type UIPet } from '../interfaces/pet.interface';
 
 axios.defaults.baseURL = import.meta.env.VITE_API_URL;
