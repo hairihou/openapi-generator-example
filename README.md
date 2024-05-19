@@ -1,14 +1,12 @@
 # openapi-generator-example
 
-This repository is a example of the following technology stack:
+This repository is an example of the following tech stack:
 
 - TypeScript
 - React
 - TanStack Query
 - axios
 - OpenAPI Generator
-
-## How to
 
 ### Install dependencies
 
