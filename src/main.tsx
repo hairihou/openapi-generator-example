@@ -9,10 +9,12 @@ const enableMocking = async (): Promise<void> => {
   }
 };
 
-enableMocking().then(() => {
-  ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-});
+enableMocking()
+  .then(() => {
+    ReactDOM.createRoot(document.getElementById('root')!).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+  })
+  .catch(() => undefined);

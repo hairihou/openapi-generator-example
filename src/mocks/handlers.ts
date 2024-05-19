@@ -1,5 +1,5 @@
 import { http, HttpResponse } from 'msw';
-import { Pet } from 'petstore-models';
+import { type Pet } from 'petstore-models';
 
 const petApiBaseUrl = import.meta.env.VITE_API_URL;
 
