@@ -32,7 +32,7 @@ export const PetEasyToFix: React.FC<Props> = ({ petId }) => {
     <div>
       {data !== undefined && (
         <>
-          <p>{data?.id}</p>
+          <p>{data.id}</p>
           <p>{data.name}</p>
           {data.photoUrls.length > 0 && (
             <ul>
