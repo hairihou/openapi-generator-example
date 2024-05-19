@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { Pet, PetApi } from 'petstore-models';
-import { UIPet } from '../interfaces/pet.interface';
+import { type Pet, PetApi } from 'petstore-models';
+import { type UIPet } from '../interfaces/pet.interface';
 
 const petApi = new PetApi();
 

@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { getPetByPetId_easyToFix, postPet_easyToFix } from './api/pet';
-import { UIPet } from './interfaces/pet.interface';
+import { type UIPet } from './interfaces/pet.interface';
 
 interface Props {
   petId: number;
