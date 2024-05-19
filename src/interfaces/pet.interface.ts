@@ -13,9 +13,12 @@ const PetStatus = {
   Pending: 'pending',
   Sold: 'sold',
 } as const;
-export type PetStatus = (typeof PetStatus)[keyof typeof PetStatus];
+type PetStatus = (typeof PetStatus)[keyof typeof PetStatus];
 
-export interface UIPet {
+/**
+ * OpenAPI Generatorではなく自分で定義したPetのinterface
+ */
+export interface MyPet {
   id?: number;
   category?: Category;
   name: string;

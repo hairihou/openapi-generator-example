@@ -17,15 +17,17 @@ export const postPet = (body: Pet): Promise<Pet> => axiosPromiseResolver(petApi.
  * Easy to Fix
  */
 import axios from 'axios';
-import { type UIPet } from '../interfaces/pet.interface';
+import { type MyPet } from '../interfaces/pet.interface';
 
-axios.defaults.baseURL = import.meta.env.VITE_API_URL;
+const petApiInstance = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+});
 
 /**
  * GET: /pet/:petId
  */
-export const getPetByPetId_easyToFix = async (petId: number): Promise<UIPet> => {
-  const { data } = await axios.get<Pet>(`/pet/${petId}`);
+export const getPetByPetId_easyToFix = async (petId: number): Promise<MyPet> => {
+  const { data } = await petApiInstance.get<Pet>(`/pet/${petId}`);
   return data;
   // return {
   //   ...data,
@@ -37,9 +39,9 @@ export const getPetByPetId_easyToFix = async (petId: number): Promise<UIPet> => 
 /**
  * POST: /pet
  */
-export const postPet_easyToFix = async (_body: UIPet): Promise<UIPet> => {
-  const body: Pet = _body;
-  const { data } = await axios.post<Pet>('/pet', body);
+export const postPet_easyToFix = async (pet: MyPet): Promise<MyPet> => {
+  const body: Pet = pet;
+  const { data } = await petApiInstance.post<Pet>('/pet', body);
   return data;
   // return {
   //   ...data,

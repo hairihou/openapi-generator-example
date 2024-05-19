@@ -1,6 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Pet } from './Pet';
-import { PetEasyToFix } from './PetEasyToFix';
 
 const queryClient = new QueryClient({
   defaultOptions: {
