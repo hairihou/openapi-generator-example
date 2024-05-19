@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "generate:models": "openapi-generator-cli generate",
-    "format": "pnpm lint --fix && prettier --write **/*.{ts,tsx,mjs,json,md,yml,yaml}",
+    "format": "pnpm lint --fix && prettier --write **/*.{ts,tsx,cjs,mjs,json,md,yml,yaml}",
     "prepare": "husky"
   },
   "dependencies": {
@@ -45,7 +45,7 @@
     ]
   },
   "lint-staged": {
-    "**/*.{ts,tsx,mjs,json,md,yml,yaml}": [
+    "**/*.{ts,tsx,cjs,mjs,json,md,yml,yaml}": [
       "prettier --write"
     ]
   }
