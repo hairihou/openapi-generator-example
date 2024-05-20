@@ -6,6 +6,7 @@ This repository is an example of the following tech stack:
 - React
 - TanStack Query
 - axios
+- msw
 - OpenAPI Generator
 
 ### Install dependencies
@@ -20,7 +21,7 @@ pnpm install
 pnpm build
 ```
 
-### Generate Client code from OpenAPI
+### Generate Client code from OpenAPI (OpenJDK required)
 
 ```zsh
 pnpm generate:models

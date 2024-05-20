@@ -18,7 +18,7 @@ type PetStatus = (typeof PetStatus)[keyof typeof PetStatus];
 /**
  * OpenAPI Generatorではなく自分で定義したPetのinterface
  */
-export interface MyPet {
+export interface UIPet {
   id?: number;
   category?: Category;
   name: string;

@@ -1,4 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { type Pet as PetType } from 'petstore-models';
 import { useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { getPetByPetId, postPet } from './api/pet';
@@ -13,7 +14,7 @@ export const Pet: React.FC<Props> = ({ petId }) => {
   const { data } = useQuery({ queryKey: ['pet', petId], queryFn: () => getPetByPetId(petId) });
 
   const { mutate } = useMutation({
-    mutationFn: postPet,
+    mutationFn: (variables: PetType) => postPet(variables),
     onSuccess: (data) => {
       queryClient.setQueryData(['pet', data.id], data);
     },
