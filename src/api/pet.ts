@@ -13,9 +13,8 @@ export const postPet = (body: Pet): Promise<Pet> => axiosPromiseResolver(petApi.
  */
 export const getPetByPetId = (petId: number): Promise<Pet> => axiosPromiseResolver(petApi.getPetById(petId));
 
-/**
- * Easy to Fix
- */
+/** easy to fix */
+
 import axios from 'axios';
 import { type UIPet } from '../interfaces/pet.interface';
 

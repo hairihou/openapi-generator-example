@@ -19,8 +19,10 @@ const queryClient = new QueryClient({
 function App(): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
+      <h1>Pet</h1>
       <Pet petId={1} />
       <hr></hr>
+      <h1>Pet (easy to fix)</h1>
       <PetEasyToFix petId={2} />
     </QueryClientProvider>
   );
