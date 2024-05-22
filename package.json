@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "typecheck": "tsc",
-    "generate:models": "openapi-generator-cli generate",
+    "generate": "openapi-generator-cli generate",
     "format": "pnpm lint --fix && prettier --write **/*.{ts,tsx,cjs,mjs,json,md,yml,yaml}",
     "prepare": "husky"
   },
