@@ -21,8 +21,8 @@ pnpm install
 pnpm build
 ```
 
-### Generate Client code from OpenAPI (OpenJDK required)
+### Generate Client code and Docs from OpenAPI (OpenJDK required)
 
 ```zsh
-pnpm generate:models
+pnpm generate
 ```
