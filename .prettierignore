@@ -1,3 +1,3 @@
-pnpm-lock.yaml
-packages/*
-public/mockServiceWorker.js
+**/pnpm-lock.yaml
+**/public
+**/packages
