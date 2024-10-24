@@ -21,7 +21,7 @@ pnpm install
 pnpm build
 ```
 
-### Generate Client code and Docs from OpenAPI (OpenJDK required)
+### Generate Client code and Docs from OpenAPI (`docker compose` command required)
 
 ```zsh
 pnpm generate

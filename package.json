@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "generate": "openapi-generator-cli generate",
-    "format": "pnpm prettier --write ."
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@tanstack/react-query": "^5.37.1",
