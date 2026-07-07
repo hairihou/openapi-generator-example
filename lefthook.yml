@@ -1,6 +1,5 @@
 pre-commit:
   commands:
     check:
-      glob: '*'
       run: pnpm exec prettier --ignore-unknown --write {staged_files}
       stage_fixed: true
